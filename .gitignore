@@ -1,0 +1,24 @@
+# Виртуальное окружение
+venv/
+.env
+
+# Временные файлы Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Директории сборки PyInstaller
+build/
+dist/
+*.spec
+
+# Данные и результаты (согласно ТЗ они должны быть локально)
+output/
+data/RPA/RpaBank_report.txt
+data/PINDODO/Pindodo_report.txt
+
+# Системные файлы macOS
+.DS_Store
+
+# Файлы IDE (VS Code)
+.vscode/
