@@ -18,6 +18,15 @@ def main():
     pindodo_df = parse_pindodo_report(data_dir / "PINDODO" / "Pindodo_report.txt")
 
     success, rpa_fail, pindo_fail = reconcile_reports(rpa_df, pindodo_df)
+    rpa_df.to_excel(
+    output_dir / "RpaBank_report.xlsx",
+    index=False
+    )
+
+    pindodo_df.to_excel(
+    output_dir / "Pindodo_report.xlsx",
+    index=False
+    )
 
     with pd.ExcelWriter(output_dir / "reconciliation_report.xlsx") as writer:
         success.to_excel(writer, sheet_name="Успешные", index=False)
